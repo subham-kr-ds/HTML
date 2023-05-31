@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ass2.css">
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a>Home</a></li>
+          <li><a>About</a></li>
+          <li><a>Services</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </nav>
+
+      <div id="container">
+      <button id="showButton">Show Content</button>
+
+      <div id="content">
+        <table border="1" cellspacing="0" style="margin-top: 25px;margin-left: 20px;">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </tr>
+        </table>
+        <tbody>
+
+        </tbody>
+      </div>
+      </div>
+
+      <div id="container1">
+        <button id="planttree">Plant Tree</button>
+        <div id="mydiv">
+
+        </div>
+      </div>
+      <button id="fadeOutButton" style="margin-left: 530px;">Remove Everything</button>
+      <script>
+
+        const button1 = document.getElementById("showButton");
+        const button2 = document.getElementById("fadeOutButton");
+        const button3 = document.getElementById("planttree");
+
+        const table= document.querySelector("tbody");
+        button1.addEventListener("click",()=>{
+        const tr= document.createElement("tr");
+        const td1= document.createElement("td");
+        td1.innerText="Subham";
+        const td2= document.createElement("td");
+        td2.innerText="20";
+        const td3= document.createElement("td");
+        td3.innerText="Male";
+        tr.append(td1,td2,td3);
+        table.append(tr);
+        });
+
+        button2.addEventListener("click",()=>{
+        window.location.reload();
+        });
+
+        button3.addEventListener("click",()=>{
+        const div = document.getElementById("mydiv")
+        const image=document.createElement("img");
+        image.src="plant.png";
+        image.style.height="200px";
+        div.append(image);
+        });
+     </script>
+</body>
+</html>

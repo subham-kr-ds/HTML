@@ -1,0 +1,8 @@
+#firstid{
+    width: 50%;
+    height: 500px;
+    background-color: rgb(31,118,117);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
